@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node -r dotenv/config dist/bot.js",
-    "dev": "ts-node-dev --respawn --transpile-only --exit-child -r dotenv/config src/bot.ts",
+    "start": "node dist/bot.js",
+    "dev": "nodemon --watch src --ext ts --exec \"node --loader ts-node/esm src/bot.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,6 +38,8 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@prisma/client": "^6.11.1"
+    "@prisma/client": "^6.11.1",
+    "dotenv": "^17.0.1",
+    "nodemon": "^3.1.10"
   }
 }
