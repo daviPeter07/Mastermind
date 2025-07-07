@@ -1,10 +1,11 @@
+import "dotenv/config"
 import Fastify from 'fastify'
 const fastify = Fastify({
   logger: true
 })
 
 fastify.get('/', async function handler (request, reply) {
-  return { hello: 'world' }
+  return { hello : "hello world" }
 })
 
 try {
