@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: mastermind_db
+    restart: always
+    environment:
+      POSTGRES_USER: mastermind_user
+      POSTGRES_PASSWORD: mastermind_password
+      POSTGRES_DB: mastermind
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+volumes:
+  postgres_data:
+
+# liga o container 
+# docker-compose up -d
+
+# consulta status do docker
+# docker-compose ps
+
+# desliga banco
+#docker-compose down
