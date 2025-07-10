@@ -22,3 +22,6 @@ volumes:
 
 # desliga banco
 # docker-compose down ou docker compose down
+
+# caso queira fazer consulta de dados no banco roda o comando do prisma studio
+# npx prisma studio
