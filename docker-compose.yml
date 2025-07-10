@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   postgres:
     image: postgres:15
@@ -9,17 +8,17 @@ services:
       POSTGRES_PASSWORD: mastermind_password
       POSTGRES_DB: mastermind
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
 volumes:
   postgres_data:
 
 # liga o container 
-# docker-compose up -d
+# docker-compose up -d ou docker compose up -d
 
 # consulta status do docker
-# docker-compose ps
+# docker-compose ps ou docker compose ps
 
 # desliga banco
-#docker-compose down
+# docker-compose down ou docker compose down
